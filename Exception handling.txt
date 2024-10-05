@@ -1,0 +1,7 @@
+1. Write a C# program that reads a list of integers from the user and throws an exception if any numbers are duplicates.
+
+https://github.com/mwael123/Handle-duplication
+
+2. Write a C# program to create a method that takes a string as input and throws an exception if the string does not contain vowels.
+
+https://github.com/mwael123/Handlig-Vowels
