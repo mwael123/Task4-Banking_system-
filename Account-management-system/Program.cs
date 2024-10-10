@@ -1,4 +1,4 @@
-﻿using Account_management_system;
+using Account_management_system;
 using System;
 using System.Collections.Generic;
 using System.Security.Principal;
@@ -22,40 +22,41 @@ class Program
         AccountUtil.Withdraw(accounts, 2000);
 
         // Savings
-        
-        accounts.Add(new Savings_Account());                       
-        accounts.Add(new Savings_Account("Superman"));             
-        accounts.Add(new Savings_Account("Batman", 2000));          
-        accounts.Add(new Savings_Account("Wonderwoman", 5000, 5.0));
-        AccountUtil.Display(accounts);
-        AccountUtil.Deposit(accounts, 1000);  
-        AccountUtil.Withdraw(accounts, 2000); 
+        var savAccounts = new List<Account>();
+        savAccounts.Add(new Savings_Account());
+        savAccounts.Add(new Savings_Account("Superman"));
+        savAccounts.Add(new Savings_Account("Batman", 2000));
+        savAccounts.Add(new Savings_Account("Wonderwoman", 5000, 5.0));
+
+        AccountUtil.Display(savAccounts);
+        AccountUtil.Deposit(savAccounts, 1000);
+        AccountUtil.Withdraw(savAccounts, 2000);
 
         // Checking
-        
-        accounts.Add(new Checking_account());
-        accounts.Add(new Checking_account("Larry2"));
-        accounts.Add(new Checking_account("Moe2", 2000));
-        accounts.Add(new Checking_account("Curly2", 5000));
+        var checAccounts = new List<Account>();
+        checAccounts.Add(new Checking_account());
+        checAccounts.Add(new Checking_account("Larry2"));
+        checAccounts.Add(new Checking_account("Moe2", 2000));
+        checAccounts.Add(new Checking_account("Curly2", 5000));
 
-        AccountUtil.Display(accounts);
-        AccountUtil.Deposit(accounts, 1000);
-        AccountUtil.Withdraw(accounts, 2000);
-        AccountUtil.Withdraw(accounts, 2000);
+        AccountUtil.Display(checAccounts);
+        AccountUtil.Deposit(checAccounts, 1000);
+        AccountUtil.Withdraw(checAccounts, 2000);
+        AccountUtil.Withdraw(checAccounts, 2000);
 
         // Trust
-        
-        accounts.Add(new Trust_account());
-        accounts.Add(new Trust_account("Superman2"));
-        accounts.Add(new Trust_account("Batman2", 2000));
-        accounts.Add(new Trust_account("Wonderwoman2", 5000, 5.0));
+        var trustAccounts = new List<Account>();
+        trustAccounts.Add(new Trust_account());
+        trustAccounts.Add(new Trust_account("Superman2"));
+        trustAccounts.Add(new Trust_account("Batman2", 2000));
+        trustAccounts.Add(new Trust_account("Wonderwoman2", 5000, 5.0));
 
-        AccountUtil.Display(accounts);
-        AccountUtil.Deposit(accounts, 1000);
-        AccountUtil.Deposit(accounts, 6000);
-        AccountUtil.Withdraw(accounts, 2000);
-        AccountUtil.Withdraw(accounts, 3000);
-        AccountUtil.Withdraw(accounts, 500);
+        AccountUtil.Display(trustAccounts);
+        AccountUtil.Deposit(trustAccounts, 1000);
+        AccountUtil.Deposit(trustAccounts, 6000);
+        AccountUtil.Withdraw(trustAccounts, 2000);
+        AccountUtil.Withdraw(trustAccounts, 3000);
+        AccountUtil.Withdraw(trustAccounts, 500);
 
         Console.WriteLine();
     }
